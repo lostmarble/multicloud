@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>屌霸天</title>
+<link rel="stylesheet" type="text/css" href="/static/processMojit/assets/login.css" />
+</head>
+
+<script src="http://yui.yahooapis.com/3.10.1/build/yui/yui-min.js"></script>
+
+
+<body style="margin:0px auto;padding:0px">
+<!--顶部标题栏部分-->
+<div align="center" style="background-color:#000066; height:100px">
+	<div align="left" style="width:1000px;">
+		<table width="100%">
+		<tr>
+			<td width="60%">
+			<div id="logo"></div>
+			</td>
+			<td width="40%">
+				<table width="100%">
+				<form  action="home.html" method="post">
+				<tr><td>
+						<label style="color:#FFFFFF">账号：</label><input type="text" id="username" width="120px"  style="margin-right:5px; font-size:12px" />
+						<br/>
+						<label style="color:#FFFFFF">密码：</label><INPUT TYPE="password" id="password"  width="120px" style="margin-right:5px; font-size:12px">
+						<input type="submit" id="login" value="登  录" align="middle" style="font-size:12px; padding-left:6px; padding-right:6px; padding-bottom:2px; padding-top:2px"/>
+					</td>
+				</tr>
+					<td style=" padding-top:8px">
+						<input type="checkbox" id="remember_pwd" checked="checked"/><label style="color:#FFFFFF" style="font-size:13px">一周内免登录</label>
+						<a href="" style="padding-left:60px; color:#FFFFFF; font-size:14px">找回密码</a>
+					</td>
+				<tr>
+				</tr>
+				</form>
+				</table>
+			</td>
+		</tr>
+		</table>
+	</div>
+</div>
+<!--中间内容部分-->
+<div align="center" style="margin-top:50px">
+	<table width="1000px">
+	<tr >
+		<td id="ads" width="60%" align="center"></td>
+		<td width="40%" >
+		<table width="100%" align="center"  style="border: solid thin #000066">
+		<form action="" method="post">
+		<tr bgcolor="#000066" style="width:100%" align="center">
+			<td style="font-size:22px; font-weight:700; color:#FFFFFF; padding:10px">注册云盘</td>
+		</tr>
+		<tr>
+			<td  align="center" width="100%" style="padding:10px"><input type="text" name="email_address" style="font-size:18px;padding:3px" value="邮箱地址"
+			onfocus="if(value=='邮箱地址'){value=''};" onblur="if(value==''){value='邮箱地址''}"/></td>
+		</tr>
+		<tr>
+			<td  align="center" width="100%" style="padding:10px"><input type="text" name="password_init" style="font-size:18px; padding:3px"
+			 onfocus="outerHTML='<input type=password style=font-size:18px;paddding:3px>'" value="输入密码"/></td>
+		</tr>
+		<tr>
+			<td  align="center" width="100%" style="padding:10px"><input type="text" name="password_ack" style="font-size:18px; padding:3px"
+			 onfocus="outerHTML='<input type=password style=font-size:18px;paddding:3px>'" value="确认密码"/></td>
+		</tr>
+		<tr>
+			<td	align="center" width="100%" style="padding:10px"><input type="submit" value="注  册" style="padding:5px; font-size:18px"></td>
+		</tr>
+		</table>
+		</form>		</td>
+	</tr>
+	</table>
+</div>
+<!--底部部分-->
+<div align="center" style="margin-top:50px;">
+	<table width="1000px" bgcolor="#EAEAEA">
+	<tr>
+		<td width="40%"  align="center" style="padding:10px">
+			<label style="font-size:35px; font-weight:700; color: #FFFFFF">敬 请 期 待</label>
+		</td>
+		<td width="30%" align="center" style="padding:5px">
+		<div id="android"></div>		</td>
+		<td width="30%" align="center" style="padding:5px">
+		<div id="ios"></div>		</td>
+	</tr>
+	</table>
+</div>	
+
+<script>
+YUI().use('node','button',function(Y){
+		var checkNull=function(e){
+			var name=Y.one('#username').get('value'),
+				pass=Y.one('#password').get('value');
+			if(name==''|| pass==''){
+				e.preventDefault();
+				if(name==''){ 
+				alert("用户名不能为空！");
+				}else if(pass=='') {alert("密码不能为空！");}
+			}
+		}
+		var user=Y.one('#login');		
+		user.on("click",checkNull);	
+	});
+</script>
+</body>
+</html>

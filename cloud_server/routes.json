@@ -1,0 +1,15 @@
+[
+  {
+    "settings": ["master"],
+    "root": {
+      "verbs": ["get"],
+      "path": "/login.html",
+      "call": "process.index"
+    },
+    "contactus": {
+      "path": "/home.html",
+      "verbs": ["post", "get"],
+      "call": "process.contactus"
+    }
+  }
+]
