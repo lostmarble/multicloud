@@ -2,5 +2,3 @@ multicloud
 ==========
 
 MultiCloud
-
-first commit

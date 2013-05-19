@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	h2 Setup
+	p 
+		| Hello every one, this is a Yahoo demo! You can visit it 
+		a(href='http://yahoo.com', target='_blank') here 
+		| to get more infomation.
+	p 
+	//form.form-inline.app-setup(action='/json/setupApp')
+		//input.input-medium(type='text', name='app_key', placeholder='user name')
+		//&nbsp
+		//input.input-medium(type='password', name='app_secret', placeholder='password')
+		//&nbsp
+		//label.radio.inline
+		//	input(type='radio', value="sandbox", name="root", checked="checked")
+		//	| App folder
+		//label.radio.inline
+		//	input(type='radio', value="dropbox", name="root")
+		//	| Full dropbox
+		//&nbsp
+		//button.btn(type='submit') Create link
+
+	div(class='access' + (authorize_url ? '' : ' hide' ))
+		p
+			a.appAccessLink(href= authorize_url,target="_blank",title="Give app access") Dropbox Authorize 
+
+
+		div.well.span3.offset4.access-token
+			button.btn.btn-large.btn-block.btn-primary(href='/json/generateAccessToken',data-loading-text='Loading...') Generate access token
+		div
+
+block js
+	script(src='/javascripts/index.js')
+
