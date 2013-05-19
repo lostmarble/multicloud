@@ -1,0 +1,24 @@
+#logo {background:url(images/logo_small.png);width:200px;height:70px;}
+#upload_file{font-size:16px;color:#FFFFFF;font-weight:600; padding:5px; background-image:url(images/up_bg.png); }
+#new_file{font-size:16px; color:#FFFFFF; font-weight:600;margin-left:30px;padding:5px; background-image:url(images/new_bg.png)}
+
+#file{background-image:url(images/file_img.jpg); background-repeat:no-repeat;font-size:16px; font-weight:600; width:90px}
+div.first{background-image:url(images/file_img_over.jpg) !important; background-repeat:no-repeat;font-size:16px; font-weight:800; width:90px;color:#4F94CD;}
+
+#pic{background-image:url(images/pic_img.jpg); background-repeat:no-repeat;font-size:16px; font-weight:600; width:90px}
+div.second{background-image:url(images/pic_img_over.jpg) !important; background-repeat:no-repeat;font-size:16px; font-weight:800; width:90px;color:#4F94CD;}
+
+#music{background-image:url(images/music_img.jpg); background-repeat:no-repeat;font-size:16px; font-weight:600; width:90px}
+div.third{background-image:url(images/music_img_over.jpg) !important; background-repeat:no-repeat;font-size:16px; font-weight:800; width:90px;color:#4F94CD;}
+
+#vedio{background-image:url(images/vedio_img.jpg); background-repeat:no-repeat;font-size:16px; font-weight:600; width:90px}
+div.forth{background-image:url(images/vedio_img_over.jpg) !important; background-repeat:no-repeat;font-size:16px; font-weight:800; width:90px;color:#4F94CD;}
+
+#other{background-image:url(images/other_img.jpg); background-repeat:no-repeat;font-size:16px; font-weight:600; width:90px}
+div.fifth{background-image:url(images/other_img_over.jpg) !important; background-repeat:no-repeat;font-size:16px; font-weight:800; width:90px;color:#4F94CD;}
+
+#trash{background-image:url(images/trash_img.jpg); background-repeat:no-repeat;font-size:16px; font-weight:600; width:110px}
+div.sixth{background-image:url(images/trash_img_over.jpg) !important; background-repeat:no-repeat;font-size:16px; font-weight:800; width:90px;color:#4F94CD;}
+
+
+

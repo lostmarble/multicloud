@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>云盘</title>
+<link rel="stylesheet" type="text/css" href="/static/processMojit/assets/home.css" />
+</head>
+<script src="http://yui.yahooapis.com/3.10.1/build/yui/yui-min.js"></script>
+<style type="text/css">
+#leftDiv
+{
+  float:left;
+  width:20%;
+  height:600px;
+  background-color:#E6E6FA;
+}
+#rightDiv
+{
+  float:right;
+  width:80%;
+  height:600px;
+}
+
+a.first:link {color:#FFFFFF; text-decoration: none}
+a.first:visited {color:#FFFFFF; text-decoration: none}
+a.first:hover {text-decoration: underline}
+
+tr.one{ background-color:#E6E6FA; font-size:16px;}
+td.one{ padding:5px}
+
+</style>
+<body style="margin:0px auto;padding:0px">
+<!--顶部信息栏-->
+<div style="height:70px;border:solid thin #000000; background-color:#000066">
+	<table width="100%">
+	<tr>
+		<td width="20%"><div id="logo"></div></td>
+		<td width="20%"><label style="font-size:32px; font-weight:700; color:#FFFFFF">多盘</label></td> 
+		<td width="40%" align="right">
+			<form action="" method="post">
+			<input type="text" width="200px" style="font-size:17px; padding:5px" onfocus="if(value=='查找文件'){value=''};" onblur="if(value==''){value='查找文件''}" value="查找文件"/>
+			<input type="submit" value="搜索" style="font-size:15px; padding-left:7px; padding-right:7px; padding-top:3px; padding-bottom:3px"/>
+			</form>
+		</td>
+		<td align="center" width="20%" style="padding:10px">
+	    	<a class="first" href="" style="padding-right:10px;">添加网盘</a>
+			<a class="first" href="" style="padding-right:10px">设置</a>
+			<a class="first" href="" >更多</a>
+		</td>
+	</tr>
+	</table>
+</div>
+
+<!--主题部分：左侧操作栏和右侧显示栏-->
+<div style="height:600px; width:100%; padding-top:0px">
+
+
+	<!---左侧操作栏-->
+  <div id="leftDiv" >
+		<table width="100%" style="padding:8px">
+		<tr style="margin:5px">
+			<td align="center" style="padding:10px; background-color:#000066"><label style=" font-size:16px; color:#FFFFFF;font-weight:600">全部文件</label></td>
+		</tr>
+		<tr id="tr_file" style="margin:5px">
+			<td align="center" style="padding:10px"><div id="file">文档</div></td>
+		</tr>
+		<tr id="tr_pic" style="margin:5px">
+			<td align="center" style="padding:10px"><div id="pic">图片</div></td>
+		</tr>
+		<tr id="tr_music" style="margin:5px">
+			<td align="center" style="padding:10px"><div id="music">音乐</div></td>
+		</tr>
+		<tr id="tr_vedio" style="margin:5px">
+			<td align="center" style="padding:10px"><div id="vedio">视频</div></td>
+		</tr>
+		<tr id="tr_other" style="margin:5px">
+			<td align="center" style="padding:10px"><div id="other">其他</div></td>
+		</tr>
+		<tr>
+			<td style="padding:5px"><hr/></td>
+		</tr>
+		<tr id="tr_trash" style="margin:5px">
+			<td align="center" style="padding:10px"><div id="trash">回收站</div></td>
+		</tr>
+		<tr>
+			<td style="padding:5px"><hr/></td>
+		</tr>
+		</table>
+	<br/>
+	    <table id="compacity" width="100%" style="padding:8px">
+		<tr>
+			<td colspan="2" style="padding:5px"><label style=" font-size:18px; font-weight:600">空间及使用情况</label></td>
+		</tr>
+		<tr>
+			<td style="padding:5px"><label style="">全部空间</label></td>
+			<td style="padding:5px">10G</td>
+		</tr>
+		<tr>
+			<td style="padding:5px"><label style="">已用空间</label></td>
+			<td style="padding:5px">2G</td>
+		</tr>
+		</table>
+  </div>
+	<!--右侧显示栏-->
+	<div id="rightDiv">
+		<!---上部操作栏-->
+		<div style="background-color:#E6E6FA; padding:10px; padding-left:15px">
+		  <input id="upload_file" type="button" value="上 传 文 件" />
+		  <input id="new_file" type="button" value="新建文件夹"/>	 
+	  </div>
+		
+		<table width="100%" style="padding:10px; margin-top:10px">
+		<form action="" method="post">
+		<tr>
+			<td colspan="4" style="padding-left:5px">
+			<input type="button" value="下载"/>
+			<input type="button" value="删除"/>
+			
+			</td>
+		</tr>
+		<tr class="one">
+			<td class="one" width="5%"><input type="checkbox"></td>
+			<td class="one" width="50%">文件名</td>
+			<td class="one" width="20%">大小 </td>
+			<td class="one" width="25%">修改日期</td>
+		</tr>
+		<tr >
+			<td class="one" width="5%"><input type="checkbox"></td>
+			<td class="one" width="50%">疯狂的石头</td>
+			<td class="one" width="20%">0.8G </td>
+			<td class="one" width="25%">2010-01-13</td>
+		</tr>
+		<tr >
+			<td class="one" width="5%"><input type="checkbox"></td>
+			<td class="one" width="50%">社交网络</td>
+			<td class="one" width="20%">1.2G </td>
+			<td class="one" width="25%">2013-02-01</td>
+		</tr>		
+		</form>
+		</table>
+	
+	</div>
+	
+</div>
+
+
+
+<script>
+	YUI().use('node','div',function(Y){
+		var over_file1=function(e){
+			Y.one('#file').setHTML('<div id="file" class="first">文档</div>');
+		};
+		var out_file1=function(e){
+			Y.one('#file').setHTML('<div id="file">文档</div>');
+		};	
+		//===============
+		var over_file2=function(e){
+			Y.one('#pic').setHTML('<div id="pic" class="second">图片</div>');
+		};
+		var out_file2=function(e){
+			Y.one('#pic').setHTML('<div id="pic">图片</div>');
+		};
+		//===============
+		var over_file3=function(e){
+			Y.one('#music').setHTML('<div id="music" class="third">音乐</div>');
+		};
+		var out_file3=function(e){
+			Y.one('#music').setHTML('<div id="music">音乐</div>');
+		};	
+		//===============
+		var over_file4=function(e){
+			Y.one('#vedio').setHTML('<div id="vedio" class="forth">视频</div>');
+		};
+		var out_file4=function(e){
+			Y.one('#vedio').setHTML('<div id="vedio">视频</div>');
+		};
+		//===============
+		var over_file5=function(e){
+			Y.one('#other').setHTML('<div id="other" class="fifth">其他</div>');
+		};
+		var out_file5=function(e){
+			Y.one('#other').setHTML('<div id="other">其他</div>');
+		};
+		//===============
+		var over_file6=function(e){
+			Y.one('#trash').setHTML('<div id="trash" class="sixth">回收站</div>');
+		};
+		var out_file6=function(e){
+			Y.one('#trash').setHTML('<div id="trash">回收站</div>');
+		};
+		//===============
+			
+		Y.one('#tr_file').on('mouseover',over_file1);
+		Y.one('#tr_file').on('mouseout',out_file1);
+		
+				
+		Y.one('#tr_pic').on('mouseover',over_file2);
+		Y.one('#tr_pic').on('mouseout',out_file2);
+		
+			
+		Y.one('#tr_music').on('mouseover',over_file3);
+		Y.one('#tr_music').on('mouseout',out_file3);
+		
+				
+		Y.one('#tr_vedio').on('mouseover',over_file4);
+		Y.one('#tr_vedio').on('mouseout',out_file4);
+		
+				
+		Y.one('#tr_other').on('mouseover',over_file5);
+		Y.one('#tr_other').on('mouseout',out_file5);
+		
+				
+		Y.one('#tr_trash').on('mouseover',over_file6);
+		Y.one('#tr_trash').on('mouseout',out_file6);
+		
+	});
+</script>
+
+
+
+
+
+
+</body>
+</html>
